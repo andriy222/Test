@@ -1,0 +1,123 @@
+.postCard {
+  background: rgba(15, 52, 96, 0.8);
+  backdrop-filter: blur(20px);
+  border: 2px solid rgba(0, 212, 255, 0.2);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  transition: all 0.3s ease;
+  animation: fadeInUp 0.4s ease;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.postCard:hover {
+  border-color: rgba(0, 212, 255, 0.5);
+  box-shadow: 0 10px 40px rgba(0, 212, 255, 0.2);
+  transform: translateY(-5px);
+}
+
+.postHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.postTitle {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 0 0 10px rgba(0, 212, 255, 0.3);
+  flex: 1;
+  min-width: 200px;
+}
+
+.postDate {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.875rem;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.dateIcon {
+  font-size: 1rem;
+}
+
+.postContent {
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  margin: 0 0 1.5rem 0;
+  font-size: 1rem;
+}
+
+.postFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.deleteButton {
+  background: rgba(230, 57, 70, 0.9);
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+}
+
+.deleteButton:hover {
+  background: rgba(230, 57, 70, 1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(230, 57, 70, 0.4);
+}
+
+.deleteButton:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 640px) {
+  .postCard {
+    padding: 1.25rem;
+  }
+
+  .postHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .postTitle {
+    font-size: 1.25rem;
+  }
+
+  .postDate {
+    align-self: flex-start;
+  }
+
+  .postFooter {
+    justify-content: stretch;
+  }
+
+  .deleteButton {
+    width: 100%;
+  }
+}
